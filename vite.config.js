@@ -8,7 +8,9 @@ export default defineConfig({
     host: "0.0.0.0",
     port: process.env.PORT || 3000,
   },
-  define: {
-    "process.env": {}, // Ensures no unexpected dotenv references
+  preview: {
+    host: "0.0.0.0",
+    port: process.env.PORT || 3000,
+    allowedHosts: ["chautdn-authorization-fe.onrender.com"], // Add your Render domain here
   },
 });
